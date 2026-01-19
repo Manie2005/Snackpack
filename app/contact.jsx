@@ -1,16 +1,17 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { Link  } from 'expo-router'
-const About = () => {
+import { Link } from 'expo-router'
+const Contact = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>About Us</Text>
+      <Text style={styles.title}>Contact Us</Text>
       <Link href= "/" style={styles.links}>Back Home</Link>
+      
     </View>
   )
 }
 
-export default About
+export default Contact
 
 const styles = StyleSheet.create({
     container:{
