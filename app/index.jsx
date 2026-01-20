@@ -47,6 +47,6 @@ width:`100%`,
 },
 links:{
 marginTop:10,
-borderBottomWidth:1
+borderBottomWidth:1,
 },
 })
