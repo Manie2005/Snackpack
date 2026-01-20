@@ -2,9 +2,12 @@ import { StyleSheet, Text, View, Image } from 'react-native'
 import Logo from '../assets/snackpack.png'
 import { Link } from 'expo-router'
 
+//themedview component import
+
+import ThemedView from '../components/ThemedView'
 const Home = () => {
   return (
-    <View style={styles.container}>
+    <ThemedView style={styles.container}>
     <Image source={Logo} style={styles.img} resizeMode='contain' />
           {/* <Text style ={styles.title}>Welcome everyone</Text>
             <Text style ={styles.secondtitle}>to the one-stop app for your treats</Text> */}
@@ -13,7 +16,7 @@ const Home = () => {
             <Link href= "/about" style={styles.links}>About Us</Link>
       <Link href= "/contact" style={styles.links}>Contact Us</Link>
 
-    </View>
+    </ThemedView>
   )
 }
 
@@ -24,7 +27,7 @@ const styles = StyleSheet.create({
         flex:1,
 justifyContent:'center',
 alignItems:'center',
-backgroundColor:'#fff'
+// backgroundColor:'#fff'
     },
 
 //     title:{
