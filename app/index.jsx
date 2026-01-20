@@ -8,7 +8,9 @@ const Home = () => {
     <Image source={Logo} style={styles.img} resizeMode='contain' />
           {/* <Text style ={styles.title}>Welcome everyone</Text>
             <Text style ={styles.secondtitle}>to the one-stop app for your treats</Text> */}
-            <Text style ={styles.card}><Link href= "/about">About Us</Link> </Text>
+                        <Text style ={styles.card}><Link href= "/shop">Get Started</Link> </Text>
+
+            <Link href= "/about" style={styles.links}>About Us</Link>
       <Link href= "/contact" style={styles.links}>Contact Us</Link>
 
     </View>
