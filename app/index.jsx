@@ -4,7 +4,7 @@ import { Link } from 'expo-router'
 
 //themedview component import
 
-import ThemedView from '../components/Them edView'
+import ThemedView from '../components/ThemedView'
 const Home = () => {
   return (
     <ThemedView style={styles.container}>
@@ -13,8 +13,7 @@ const Home = () => {
             <Text style ={styles.secondtitle}>to the one-stop app for your treats</Text> */}
                         <Text style ={styles.card}><Link href= "/shop">Get Started</Link> </Text>
 
-            <Link href= "/about" style={styles.links}>About Us</Link>
-      <Link href= "/contact" style={styles.links}>Contact Us</Link>
+          
 
     </ThemedView>
   )
