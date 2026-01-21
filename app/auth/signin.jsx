@@ -77,7 +77,7 @@ const SignIn = () => {
                 </Pressable>
 <View style={styles.dividerContainer}>
   <View style={styles.line} />
-  <Text style={styles.dividerText}>Or with</Text>
+  <Text style={[styles.dividerText,{color:theme.text}]}>Or with</Text>
   <View style={styles.line} />
 </View>
  <Link href="/shop" style={[styles.cards,{marginBottom:25}]}>
