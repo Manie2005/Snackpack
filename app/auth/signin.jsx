@@ -23,7 +23,7 @@ const SignIn = () => {
     };
 
     return (
-        <View style={[styles.container, { backgroundColor: theme.background }]}>
+        <View style={[styles.container, { backgroundColor: theme.background}]}>
             {/* Header */}
             <View style={styles.headerContainer}>
                 <Text style={[styles.header, { color: theme.title }]}>Welcome Back</Text>
@@ -32,21 +32,20 @@ const SignIn = () => {
 
             {/* Form */}
             <View style={styles.form}>
-                <Text style={[styles.header2, { color: theme.text }]}>Email</Text>
+                <Text style={[styles.header2, { color: theme.text, paddingBottom: 5 }]}>Email</Text>
                 <TextInput
                     style={[styles.input, { borderColor: theme.border, color: theme.text }]}
-                    placeholder="Email"
+                    placeholder="Your email"
                     placeholderTextColor="#888"
                     keyboardType="email-address"
                     autoCapitalize="none"
                     value={email}
                     onChangeText={setEmail}
                 />
-                <Text style={[styles.header2, { color: theme.text }]}>Password</Text>
-
+                <Text style={[styles.header2, { color: theme.text, paddingBottom: 5 }]}>Password</Text>
                 <TextInput
                     style={[styles.input, { borderColor: theme.border, marginBottom: 20, color: theme.text }]}
-                    placeholder="Password"
+                    placeholder="Your password"
                     placeholderTextColor="#888"
                     secureTextEntry
                     value={password}
@@ -81,7 +80,7 @@ const SignIn = () => {
                     <View style={styles.line} />
                 </View>
                 <View style={styles.containers}>
-                    <Pressable href="/shop" style={[styles.button, { flexDirection: 'row', display: 'flex', backgroundColor: "#fff" }]}>
+                    <Pressable href="/shop" style={[styles.button, { marginBottom: 5,flexDirection: 'row', display: 'flex', backgroundColor: "#fff" }]}>
                         <Image source={require('../../assets/google-logo.png')} style={[styles.icon, { marginLeft: 55 }]}
                         />
                         <Text style={[styles.cardTexts, { paddingLeft: 20 }]}>Sign in with Google </Text>
@@ -121,6 +120,8 @@ const styles = StyleSheet.create({
     card: {
         backgroundColor: '#E10600',
         marginTop: 10,
+        marginLeft:0,
+        marginRight:0,
         padding: 15,
         borderRadius: 15,
         width: '100%',
@@ -152,8 +153,8 @@ const styles = StyleSheet.create({
         textAlign: 'center'
     },
     headerContainer: {
-        marginTop: 50,
-        marginBottom: 40,
+        marginTop: 20,
+        marginBottom: 30,
     },
     dividerContainer: {
         flexDirection: 'row',
@@ -172,8 +173,8 @@ const styles = StyleSheet.create({
         fontWeight: '500',
     },
     header: {
-        fontSize: 28,
-        fontWeight: '700',
+        fontSize: 26,
+        fontWeight: '900',
     },
     header2: {
         fontSize: 16,

@@ -43,33 +43,33 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff'
   },
   card: {
-    backgroundColor: '#E10600',
+        backgroundColor: '#fff',
     marginTop: 10,
     padding: 15,
     borderRadius: 15,
-    width: '90%',
+    width: '85%',
     fontWeight: 'bold',
     alignItems: 'center',
     justifyContent: 'center'
   },
   cards: {
-    backgroundColor: '#fff',
+    backgroundColor: '#E10600',
     marginTop: 5,
     padding: 15,
     borderRadius: 15,
-    width: '90%',
+    width: '85%',
     fontWeight: 'bold',
     alignItems: 'center',
     justifyContent: 'center'
   },
   cardText: {
-    color: '#FFF',
+    color: '#E10600',
     fontSize: 18,
     fontWeight: '600',
     textAlign: 'center'
   },
   cardTexts: {
-    color: '#E10600',
+    color: '#fff',
     fontSize: 18,
     fontWeight: '600',
     textAlign: 'center'
