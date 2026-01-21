@@ -4,7 +4,7 @@ import { Link } from 'expo-router'
 
 //themedview component import
 
-import ThemedView from '../components/ThemedView'
+import ThemedView from '../components/Them edView'
 const Home = () => {
   return (
     <ThemedView style={styles.container}>
