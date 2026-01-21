@@ -19,6 +19,8 @@ const RootLayout = () => {
         <Stack.Screen name="about" options={{ title: `` }} />
         <Stack.Screen name="contact" options={{ title: `` }} />
         <Stack.Screen name="auth/signin" options={{ title: `` }} />
+                <Stack.Screen name="auth/signup" options={{ title: `` }} />
+
         <Stack.Screen name="shop" options={{
           title: ``, headerRight: () => (
             <>

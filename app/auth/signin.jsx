@@ -63,17 +63,17 @@ const SignIn = () => {
                     <Text style={styles.cardText}> Login</Text>
                 </Link>
 
-                <Pressable onPress={[() => router.push('/auth/signup'), { marginBottom: 30 }]}>
                     <Text style={[styles.linkText, { color: theme.text }]}>
                         Don't have an account?{' '}
+                        <Link href="/auth/signup" >
                         <Text style={[styles.signUpText, { color: theme.warning }]}>
                             Sign Up
                         </Text>
+                        </Link>
                     </Text>
 
 
 
-                </Pressable>
                 <View style={styles.dividerContainer}>
                     <View style={styles.line} />
                     <Text style={[styles.dividerText, { color: theme.text }]}>Or with</Text>

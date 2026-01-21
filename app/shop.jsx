@@ -24,9 +24,9 @@ const Shop = () => {
 
         <Text style={styles.cardTexts}> Continue</Text>
       </Link>
-      <Link href="/shop" style={styles.card}>
+      <Link href="/auth/signup" style={styles.card}>
 
-        <Text style={styles.cardText}> Sign in</Text>
+        <Text style={styles.cardText}> Sign Up</Text>
       </Link>
       <Text></Text>
     </View>
