@@ -1,4 +1,4 @@
-import { StyleSheet, View, Text, TextInput, Pressable, useColorScheme } from 'react-native';
+import { StyleSheet, View, Text, TextInput, Pressable, useColorScheme, Image } from 'react-native';
 import React, { useState } from 'react';
 import { Link, useRouter } from 'expo-router';
 import { Colors } from '../../constants/colors';
@@ -34,7 +34,7 @@ const SignIn = () => {
             <View style={styles.form}>
                 <Text style={[styles.header2, { color: theme.text }]}>Email</Text>
                 <TextInput
-                    style={[styles.input, { borderColor: theme.border,  color: theme.text  }]}
+                    style={[styles.input, { borderColor: theme.border, color: theme.text }]}
                     placeholder="Email"
                     placeholderTextColor="#888"
                     keyboardType="email-address"
@@ -53,18 +53,18 @@ const SignIn = () => {
                     onChangeText={setPassword}
                 />
 
-                <Link href="/shop" style={{ paddingBottom: 10, marginBottom:20 }}>
+                <Link href="/shop" style={{ paddingBottom: 10, marginBottom: 20 }}>
 
                     <Text style={[styles.header2, { color: theme.warning }]}>Forgot Password? </Text>
                 </Link>
 
 
-                <Link href="/shop" style={[styles.card,{marginBottom:25}]}>
+                <Link href="/shop" style={[styles.card, { marginBottom: 25 }]}>
 
                     <Text style={styles.cardText}> Login</Text>
                 </Link>
 
-                <Pressable onPress={[() => router.push('/auth/signup'),{marginBottom:30}]}>
+                <Pressable onPress={[() => router.push('/auth/signup'), { marginBottom: 30 }]}>
                     <Text style={[styles.linkText, { color: theme.text }]}>
                         Don't have an account?{' '}
                         <Text style={[styles.signUpText, { color: theme.warning }]}>
@@ -75,20 +75,26 @@ const SignIn = () => {
 
 
                 </Pressable>
-<View style={styles.dividerContainer}>
-  <View style={styles.line} />
-  <Text style={[styles.dividerText,{color:theme.text}]}>Or with</Text>
-  <View style={styles.line} />
-</View>
- <Link href="/shop" style={[styles.cards,{marginBottom:25}]}>
+                <View style={styles.dividerContainer}>
+                    <View style={styles.line} />
+                    <Text style={[styles.dividerText, { color: theme.text }]}>Or with</Text>
+                    <View style={styles.line} />
+                </View>
+                <View style={styles.containers}>
+                    <Pressable href="/shop" style={[styles.button, { flexDirection: 'row', display: 'flex', backgroundColor: "#fff" }]}>
+                        <Image source={require('../../assets/google-logo.png')} style={[styles.icon, { marginLeft: 55 }]}
+                        />
+                        <Text style={[styles.cardTexts, { paddingLeft: 20 }]}>Sign in with Google </Text>
+                    </Pressable>
+                </View>
 
-                    <Text style={[styles.cardTexts,{color:"#000"}]}> Sign in with Google</Text>
-                </Link>
-
- <Link href="/shop" style={[styles.cards,{marginBottom:25}]}>
-
-                    <Text style={styles.cardTexts}>Sign in with Apple </Text>
-                </Link>
+                <View style={styles.containers}>
+                    <Pressable href="/shop" style={[styles.button, { marginBottom: 25, flexDirection: 'row', display: 'flex', backgroundColor: "#fff" }]}>
+                        <Image source={require('../../assets/apple-logo.png')} style={[styles.icons, { marginLeft: 50 }]}
+                        />
+                        <Text style={[styles.cardTexts, { paddingLeft: 18 }]}>Sign in with Apple </Text>
+                    </Pressable>
+                </View>
             </View>
         </View>
 
@@ -102,6 +108,16 @@ const styles = StyleSheet.create({
         flex: 1,
         padding: 20,
     },
+
+
+    icon: {
+        height: 30,
+        width: 30
+    },
+    icons: {
+        height: 30,
+        width: 40
+    },
     card: {
         backgroundColor: '#E10600',
         marginTop: 10,
@@ -113,21 +129,22 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     cards: {
-    backgroundColor: '#fff',
-    marginTop: 5,
-    padding: 15,
-    borderRadius: 15,
-    width: '100%',
-    fontWeight: 'bold',
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-  cardTexts: {
-    // color: '#E10600',
-    fontSize: 18,
-    fontWeight: '600',
-    textAlign: 'center'
-  },
+        backgroundColor: '#fff',
+        marginTop: 5,
+        padding: 15,
+        borderRadius: 15,
+        width: '100%',
+        fontWeight: 'bold',
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    cardTexts: {
+        // color: '#E10600',
+        fontSize: 16,
+        fontWeight: '600',
+        textAlign: 'center',
+
+    },
     cardText: {
         color: '#FFF',
         fontSize: 18,
@@ -139,21 +156,21 @@ const styles = StyleSheet.create({
         marginBottom: 40,
     },
     dividerContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginVertical: 25,
-  },
-  line: {
-    flex: 1,
-    height: 1,
-    backgroundColor: '#ccc',
-  },
-  dividerText: {
-    marginHorizontal: 12,
-    fontSize: 13,
-    opacity: 0.5,
-    fontWeight: '500',
-  },
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginVertical: 20,
+    },
+    line: {
+        flex: 1,
+        height: 1,
+        backgroundColor: '#ccc',
+    },
+    dividerText: {
+        marginHorizontal: 12,
+        fontSize: 13,
+        opacity: 0.5,
+        fontWeight: '500',
+    },
     header: {
         fontSize: 28,
         fontWeight: '700',
