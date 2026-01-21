@@ -3,8 +3,8 @@ primary:"#6849a7",
 warning:"#cc475a",
 
 light:{
-text:"#625f72",
-title:"#201e2b",
+text:"#000",
+title:"#000",
 background:"#e0dfe8",
 navBackground:"#e8e7ef",
 iconColor:"#686477",

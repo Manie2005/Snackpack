@@ -11,7 +11,10 @@ const Home = () => {
     <Image source={Logo} style={styles.img} resizeMode='contain' />
           {/* <Text style ={styles.title}>Welcome everyone</Text>
             <Text style ={styles.secondtitle}>to the one-stop app for your treats</Text> */}
-                        <Text style ={styles.card}><Link href= "/shop">Get Started</Link> </Text>
+                         <Link href= "/shop" style={styles.card}>
+                        
+                                       <Text style ={styles.cardText}>Get Started </Text>
+                                 </Link>
 
           
 
@@ -38,7 +41,7 @@ alignItems:'center',
 // marginBottom:5
 //     },
 card:{
-    backgroundColor: `#E10600`,
+    backgroundColor: "#E10600",
     marginTop:15,
     padding:15,
     borderRadius:15,
@@ -48,6 +51,12 @@ img:{
 marginTop:120,
 height:250,
 width:`100%`,
+},
+cardText:{
+ color: '#FFF',
+    fontSize: 14,
+    fontWeight: '500',
+textAlign:'center'    
 },
 links:{
 marginTop:10,
