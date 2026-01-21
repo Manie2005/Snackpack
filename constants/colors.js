@@ -1,10 +1,11 @@
 export const Colors={
 primary:"#6849a7",
-warning:"#cc475a",
+// warning:"#cc475a",
 
 light:{
 text:"#000",
 title:"#000",
+warning:"#cc475a",
 background:"#e0dfe8",
 navBackground:"#e8e7ef",
 iconColor:"#686477",
@@ -14,6 +15,7 @@ uiBackground:"#d6d5e1",
 dark:{
 text:"#d4d4d4",
 title:"#fff",
+warning:"#cc475a",
 background:"#252231",
 navBackground:"#201e2b",
 iconColor:"#9591a5",

@@ -1,15 +1,15 @@
-import { StyleSheet, Text, View,useColorScheme} from 'react-native'
+import { StyleSheet, Text, View, useColorScheme } from 'react-native'
 import React from 'react'
-import { Link  } from 'expo-router'
+import { Link } from 'expo-router'
 import { Colors } from '../constants/colors'
 
 const About = () => {
-   const colorScheme= useColorScheme()
-   const theme= Colors[colorScheme] ?? Colors.light //Sets light theme as default
+  const colorScheme = useColorScheme()
+  const theme = Colors[colorScheme] ?? Colors.light //Sets light theme as default
   return (
-    <View style={[styles.container,{backgroundColor:theme.background, color:theme.text}]}>
+    <View style={[styles.container, { backgroundColor: theme.background, color: theme.text }]}>
       <Text style={styles.title}>About Us</Text>
-      <Link href= "/" style={styles.links}>Back Home</Link>
+      <Link href="/" style={styles.links}>Back Home</Link>
     </View>
   )
 }
@@ -17,18 +17,18 @@ const About = () => {
 export default About
 
 const styles = StyleSheet.create({
-    container:{
-        flex:1,
-justifyContent:'center',
-alignItems:'center',
-backgroundColor:'#fff'
-    },
-links:{
-marginTop:10,
-borderBottomWidth:1
-},
-    title:{
-fontWeight:'bold',
-fontSize:24
-    },
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#fff'
+  },
+  links: {
+    marginTop: 10,
+    borderBottomWidth: 1
+  },
+  title: {
+    fontWeight: 'bold',
+    fontSize: 24
+  },
 })
