@@ -21,7 +21,7 @@ const SignUp = () => {
     const [password, setPassword] = useState('');
 
     return (
-        <View style={[styles.container, { backgroundColor: theme.background }]}>
+        <View style={[styles.container, {backgroundColor: theme.background }]}>
             {/* Header */}
             <View style={styles.headerContainer}>
                 <Text style={[styles.header, { color: theme.title }]}>
@@ -71,7 +71,7 @@ const SignUp = () => {
                 {/* Register button */}
                 <Pressable
                     style={[styles.card, { marginTop: 10 }]}
-                    onPress={() => router.push('/shop')}
+                    onPress={() => router.push('/auth/emailauth')}
                 >
                     <Text style={styles.cardText}>Register</Text>
                 </Pressable>
