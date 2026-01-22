@@ -23,7 +23,7 @@ const SignIn = () => {
     };
 
     return (
-        <View style={[styles.container, { backgroundColor: theme.background}]}>
+        <View style={[styles.container, { backgroundColor: theme.background }]}>
             {/* Header */}
             <View style={styles.headerContainer}>
                 <Text style={[styles.header, { color: theme.title }]}>Welcome Back</Text>
@@ -63,14 +63,14 @@ const SignIn = () => {
                     <Text style={styles.cardText}> Login</Text>
                 </Link>
 
-                    <Text style={[styles.linkText, { color: theme.text }]}>
-                        Don't have an account?{' '}
-                        <Link href="/auth/signup" >
+                <Text style={[styles.linkText, { color: theme.text }]}>
+                    Don't have an account?{' '}
+                    <Link href="/auth/signup" >
                         <Text style={[styles.signUpText, { color: theme.warning }]}>
                             Sign Up
                         </Text>
-                        </Link>
-                    </Text>
+                    </Link>
+                </Text>
 
 
 
@@ -80,7 +80,7 @@ const SignIn = () => {
                     <View style={styles.line} />
                 </View>
                 <View style={styles.containers}>
-                    <Pressable href="/shop" style={[styles.button, { marginBottom: 5,flexDirection: 'row', display: 'flex', backgroundColor: "#fff" }]}>
+                    <Pressable href="/shop" style={[styles.button, { marginBottom: 5, flexDirection: 'row', display: 'flex', backgroundColor: "#fff" }]}>
                         <Image source={require('../../assets/google-logo.png')} style={[styles.icon, { marginLeft: 55 }]}
                         />
                         <Text style={[styles.cardTexts, { paddingLeft: 20 }]}>Sign in with Google </Text>
@@ -120,8 +120,8 @@ const styles = StyleSheet.create({
     card: {
         backgroundColor: '#E10600',
         marginTop: 10,
-        marginLeft:0,
-        marginRight:0,
+        marginLeft: 0,
+        marginRight: 0,
         padding: 15,
         borderRadius: 15,
         width: '100%',
