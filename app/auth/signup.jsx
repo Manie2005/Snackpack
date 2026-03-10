@@ -69,12 +69,21 @@ const SignUp = () => {
                 />
 
                 {/* Register button */}
-                <Pressable
-                    style={[styles.card, { marginTop: 10 }]}
-                    onPress={() => router.push('/auth/emailauth')}
-                >
-                    <Text style={styles.cardText}>Register</Text>
-                </Pressable>
+               <Pressable
+  style={[styles.card, { marginTop: 10 }]}
+  onPress={() =>
+    router.push({
+      pathname: '/auth/emailauth',
+      params: {
+        name: name,
+        email: email,
+        password: password,
+      },
+    })
+  }
+>
+  <Text style={styles.cardText}>Register</Text>
+</Pressable>
 
                 {/* Sign in link */}
 

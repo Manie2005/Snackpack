@@ -9,7 +9,7 @@ const About = () => {
   return (
     <View style={[styles.container, { backgroundColor: theme.background, color: theme.text }]}>
       <Text style={styles.title}>About Us</Text>
-      <Link href="/" style={styles.links}>Back Home</Link>
+      <Link href="/shop" style={styles.links}>Back Home</Link>
     </View>
   )
 }

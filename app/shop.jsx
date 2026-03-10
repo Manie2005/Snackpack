@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { StyleSheet, Text, View, useColorScheme, Image,ScrollView,Dimensions } from 'react-native'
 import { Link } from 'expo-router'
 import { Colors } from '../constants/colors'
@@ -13,18 +13,30 @@ import LogoBadge5 from '../assets/deliveryman3.jpg'
 const { width,height } = Dimensions.get('window')
 
 
-
 const Shop = () => {
+  const [activeIndex, setActiveIndex] = useState(0)
   const colorScheme = useColorScheme()
   const theme = Colors[colorScheme] ?? Colors.light // default to light theme
   
 
   return (
+    <View style={{flex:1}}>
+
     <ScrollView
   horizontal
   pagingEnabled
   showsHorizontalScrollIndicator={false}
+  /* The onscroll dot effect */
+
+ onScroll={(event) => {
+    const slide = Math.round(
+      event.nativeEvent.contentOffset.x / width
+    )
+    setActiveIndex(slide)
+  }}
+  scrollEventThrottle={16}
 >
+ 
   {/* Slide 1 */}
     <View style={[styles.slide, { backgroundColor: theme.background }]}>
 
@@ -80,7 +92,7 @@ const Shop = () => {
       </View>
 
       {/* Badge Logos */}
-      <View style={styles.badge1Container}>
+      <View style={styles.badge5Container}>
         <Image source={LogoBadge4} style={styles.badgeImage2} resizeMode="cover" />
       </View>
 
@@ -112,7 +124,21 @@ const Shop = () => {
     </View>
     </View>
     </ScrollView>
+  
+   <View style={styles.pagination}>
+  {[0,1].map((_, index) => (
+    <View
+      key={index}
+      style={[
+        styles.dot,
+        activeIndex === index && styles.activeDot
+      ]}
+    />
+  ))}
+</View>
+</View>
   )
+
 }
 
 export default Shop
@@ -131,8 +157,27 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: 200,
     fontSize: 26,
-    paddingBottom: 12,
+    paddingBottom: 5,
   },
+  pagination: {
+  flexDirection: 'row',
+  alignSelf: 'center',
+  bottom: 210,
+  position:'absolute'
+},
+
+dot: {
+  width: 8,
+  height: 8,
+  borderRadius: 4,
+  backgroundColor: '#ccc',
+  marginHorizontal: 5
+},
+
+activeDot: {
+  backgroundColor: '#E10600',
+  width: 8
+},
   slide: {
   width: width,
   justifyContent: 'center',
@@ -144,6 +189,8 @@ height:height
     textAlign: 'center',
     lineHeight: 20,
     opacity: 0.6,
+    paddingBottom: 20,
+
   },
   descriptionWrapper: {
     width: '90%',
@@ -222,10 +269,23 @@ height:height
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 50,
-    paddingBottom: 0,
+    paddingBottom:10,
     marginTop: -150,
     marginRight: 200,
-    borderWidth: 0.2,
+    borderWidth: 0.1,
+    borderColor: '#000',
+  },
+   badge5Container: {
+    backgroundColor: 'rgba(255, 255, 255, 1)',
+    width: 60,
+    height: 60,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 50,
+    paddingBottom:0,
+    marginTop: -150,
+    marginRight: 200,
+    borderWidth: 0.1,
     borderColor: '#000',
   },
   badge2Container: {
@@ -238,7 +298,7 @@ height:height
     paddingBottom: 0,
     marginTop: -175,
     marginLeft: 230,
-    borderWidth: 0.2,
+    borderWidth: 0.1,
     borderColor: '#000',
   },
   badgeImage: {
