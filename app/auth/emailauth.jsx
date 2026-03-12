@@ -42,7 +42,7 @@ const EmailAuth = () => {
           Verification Email
         </Text>
 
-        <Text style={[styles.subHeader, { color: theme.text }]}>
+       <Text style={[styles.subHeader, { color: theme.text }]}>
           Enter the code we sent to <Text style={{ fontWeight: 'bold', color: theme.text }}>
     {email}
   </Text>
@@ -55,7 +55,7 @@ const EmailAuth = () => {
               key={index}
               ref={inputs[index]}
               style={[
-                styles.otpInput,
+                 styles.otpInput,
                 { borderColor: theme.border, color: theme.text }
               ]}
               keyboardType="number-pad"

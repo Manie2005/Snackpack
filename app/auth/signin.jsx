@@ -52,7 +52,7 @@ const SignIn = () => {
                     onChangeText={setPassword}
                 />
 
-                <Link href="/shop" style={{ paddingBottom: 10, marginBottom: 20 }}>
+                <Link href="/auth/forgotpassword" style={{ paddingBottom: 10, marginBottom: 20 }}>
 
                     <Text style={[styles.header2, { color: theme.warning }]}>Forgot Password? </Text>
                 </Link>
