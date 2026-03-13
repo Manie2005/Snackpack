@@ -9,12 +9,14 @@ const ForgotPassword = () => {
 
 
   return (
+        <View style={[styles.container, { backgroundColor: theme.background }]}>
+    
     <View>
       <Text style={[styles.header, { color: theme.title }]}>
         Forgot Password
       </Text>
 
-       <Text style={[styles.subHeader, { color: theme.text, opacity: 0.5, margin:18,fontSize:13, lineHeight:20 }]}>
+       <Text style={[styles.subHeader, { color: theme.text, opacity: 0.5, margin:5,fontSize:13, lineHeight:20 }]}>
 Select which contact details should we use to reset your password </Text>
 
 
@@ -24,7 +26,7 @@ Select which contact details should we use to reset your password </Text>
           styles.optionCard,
           {
             borderColor: method === "email" ? theme.warning : theme.uiBackground,
-            backgroundColor: theme.uiBackground, margin:20
+            backgroundColor: theme.uiBackground, margin:5
           }
         ]}
       >
@@ -41,12 +43,12 @@ Select which contact details should we use to reset your password </Text>
 
 
       <Pressable
-        onPress={() => setMethod("email")}
+        onPress={() => setMethod("phone")}
         style={[
-          styles.optionCard1,
+          styles.optionCard,
           {
-            borderColor: method === "email" ? theme.warning : theme.uiBackground,
-            backgroundColor: theme.uiBackground, margin:20
+            borderColor: method === "phone" ? theme.warning: theme.uiBackground,
+            backgroundColor: theme.uiBackground
           }
         ]}
       >
@@ -59,8 +61,19 @@ Select which contact details should we use to reset your password </Text>
         </Text>
       </Pressable>
 
+<View style={{marginTop:-10}}>
+      <Pressable
+                style={styles.verifyButton}
+                onPress={() => {
+                  const code = otp.join('');
+                  console.log("OTP:", code);
+                }}
+              >
+                <Text style={styles.verifyText}>Continue</Text>
+              </Pressable>
+</View>
     </View>
-
+</View>
 
   )
 }
@@ -68,9 +81,14 @@ Select which contact details should we use to reset your password </Text>
 export default ForgotPassword
 
 const styles = StyleSheet.create({
+   container: {
+    flex: 1,
+    padding: 20,
+  },
+
   header: {
     fontSize: 26,
-    marginLeft:15,
+    marginLeft:5,
     marginTop:20,
     fontWeight: "900",
   },
@@ -85,7 +103,21 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 5,
     padding: 18,
-    marginTop:0,
+    marginTop:10,
     height:100
   },
+  verifyButton: {
+    backgroundColor: '#E10600',
+    padding: 15,
+    borderRadius: 10,
+    alignItems: 'center',
+    marginTop: 40
+  },
+
+  verifyText: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: '600'
+  }
+
 })
