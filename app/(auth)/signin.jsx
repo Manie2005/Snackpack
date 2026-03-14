@@ -52,9 +52,9 @@ const SignIn = () => {
                     onChangeText={setPassword}
                 />
 
-                <Link href="/auth/forgotpassword" style={{ paddingBottom: 10, marginBottom: 20 }}>
+                <Link href="/forgotpassword" style={{ paddingBottom: 10, marginBottom: 20 }}>
 
-                    <Text style={[styles.header2, { color: theme.warning }]}>Forgot Password? </Text>
+                    <Text style={[styles.header2, { color: theme.warning }]}>Forgot Passwod? </Text>
                 </Link>
 
 
@@ -65,7 +65,7 @@ const SignIn = () => {
 
                 <Text style={[styles.linkText, { color: theme.text }]}>
                     Don't have an account?{' '}
-                    <Link href="/auth/signup" >
+                    <Link href="/signup" >
                         <Text style={[styles.signUpText, { color: theme.warning }]}>
                             Sign Up
                         </Text>

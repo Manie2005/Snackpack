@@ -69,11 +69,11 @@ const Shop = () => {
       </View>
 
       {/* Action Buttons */}
-      <Link href="/auth/signin" style={styles.primaryButton}>
+      <Link href="/signin" style={styles.primaryButton}>
         <Text style={styles.primaryButtonText}>Continue</Text>
       </Link>
 
-      <Link href="/auth/signup" style={styles.secondaryButton}>
+      <Link href="/signup" style={styles.secondaryButton}>
         <Text style={styles.secondaryButtonText}>Sign Up</Text>
       </Link>
 

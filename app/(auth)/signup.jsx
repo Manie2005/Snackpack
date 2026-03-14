@@ -73,7 +73,7 @@ const SignUp = () => {
   style={[styles.card, { marginTop: 10 }]}
   onPress={() =>
     router.push({
-      pathname: '/auth/emailauth',
+      pathname: '/emailauth',
       params: {
         name: name,
         email: email,
@@ -89,7 +89,7 @@ const SignUp = () => {
 
                 <Text style={[styles.linkText, { color: theme.text }]}>
                     Have an account?{' '}
-                    <Link href="/auth/signin" >
+                    <Link href="/signin" >
                         <Text style={{ color: theme.warning }}>Sign In</Text></Link>
                 </Text>
 
@@ -98,7 +98,7 @@ const SignUp = () => {
 
                 {/* T&C's link */}
                 <Pressable
-                    onPress={() => router.push('/auth/signup')}
+                    onPress={() => router.push('/signup')}
                     style={{ marginTop: 200 }}
                 >
                     <Text style={[styles.linkText, { color: theme.text, opacity: 0.5 }]}>
