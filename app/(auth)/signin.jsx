@@ -54,7 +54,7 @@ const SignIn = () => {
 
                 <Link href="/forgotpassword" style={{ paddingBottom: 10, marginBottom: 20 }}>
 
-                    <Text style={[styles.header2, { color: theme.warning }]}>Forgot Passwod? </Text>
+                    <Text style={[styles.header2, { color: theme.warning }]}>Forgot Password? </Text>
                 </Link>
 
 
