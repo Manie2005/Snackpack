@@ -40,7 +40,7 @@ const RootLayout = () => {
           resizeMode="contain"
         />
            <Text style={{ fontWeight: 'bold', fontSize: 20, color: theme.title,paddingTop:10 }}>
-          Kupa
+          Snacks
         </Text>
       </View>
     ),  headerRight: () => (
@@ -50,6 +50,7 @@ const RootLayout = () => {
                 () => router.push('/about')} style={{ marginRight: 15}}>
                 <Text style={{color:theme.text} }>About Us</Text>
 
+<></>
               </Pressable>
               <Pressable onPress={
                 () => router.push('/contact')} style={{ marginRight: 15 }}>
@@ -62,9 +63,7 @@ const RootLayout = () => {
         }} />
 
       </Stack>
-    </>
-
-  )
+    </>  )
 }
 
 export default RootLayout
