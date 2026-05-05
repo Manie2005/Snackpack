@@ -12,4 +12,5 @@ const congrats = () => {
 
 export default congrats
 
+
 const styles = StyleSheet.create({})
