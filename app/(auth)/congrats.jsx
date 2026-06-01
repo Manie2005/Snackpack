@@ -20,9 +20,20 @@ const congrats = () => {
 
     {/* Header */}
          <Text style={[styles.header, { color: theme.text }]}>
-          Congratulation!
+          Congratulations!
          </Text>
+   {/*Description */}
+         <View style={styles.descriptionWrapper}>
    
+   <Text style={[styles.paragraph, { color: theme.text}]}>
+your account is complete, please enjoy the best{"\n"}menu from us      
+     </Text>
+</View>
+
+ {/* Action Buttons */}
+      <Link href="/signin" style={styles.primaryButton}>
+        <Text style={styles.primaryButtonText}>Get Started</Text>
+      </Link>
     </View>
      </View>
   )
@@ -44,6 +55,19 @@ const styles = StyleSheet.create({
     fontSize: 26,
     paddingBottom: 5,
   },
+   paragraph: {
+    fontSize: 14,
+    textAlign: 'center',
+    lineHeight: 20,
+    opacity: 0.6,
+    paddingBottom: 20,
+  },
+  descriptionWrapper: {
+    width: '85%',
+    alignItems: 'center',
+    marginBottom: 10,
+  },
+
  CongratsLogoContainer: {
     width: 400,
     height: 300,
@@ -58,5 +82,22 @@ CongratsLogo: {
     width: '70%',
     height: '70%',
   },
+
+  /* ---------- Button ---------- */
+  primaryButton: {
+    backgroundColor: '#E10600',
+    marginTop: 10,
+    padding: 15,
+    borderRadius: 15,
+    width: 350,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  primaryButtonText: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: '600',
+    textAlign: 'center',
+  }
 
 })

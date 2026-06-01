@@ -29,6 +29,7 @@ const RootLayout = () => {
                 <Stack.Screen name="(auth)/emailauth" options={{ title: ``, headerBackVisible: false,   // hides the back button on the header
     gestureEnabled: false  }} />
                 <Stack.Screen name="(auth)/signup" options={{ title: `` }} />
+                <Stack.Screen name="(auth)/congrats" options={{ title: `` }} />
 
         <Stack.Screen name="shop" options={{ headerBackVisible: false,   // hides the back button on the header
     gestureEnabled: false, 
