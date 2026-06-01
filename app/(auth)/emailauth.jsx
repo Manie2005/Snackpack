@@ -26,11 +26,15 @@ const EmailAuth = () => {
     useRef(null),
   ];
 const handleKeyPress = (e, index) => {
-  if (
-    e.nativeEvent.key === 'Backspace' &&
-    otp[index] === '' &&
-    index > 0
-  ) {
+  if (e.nativeEvent.key !== 'Backspace') return;
+
+  // Current box is empty, go back and clear previous
+  if (otp[index] === '' && index > 0) {
+    const newOtp = [...otp];
+
+    newOtp[index - 1] = '';
+    setOtp(newOtp);
+
     inputs[index - 1].current?.focus();
   }
 };

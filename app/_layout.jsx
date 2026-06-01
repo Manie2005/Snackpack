@@ -22,6 +22,8 @@ const RootLayout = () => {
         <Stack.Screen name="index" options={{ title: ``, headerShown: false, headerBackVisible: false,   // hides the back button on the header
     gestureEnabled: false  }} />
         <Stack.Screen name="about" options={{ title: `` }} />
+                <Stack.Screen name="home" options={{ title: `` }} />
+
         <Stack.Screen name="contact" options={{ title: `` }} />
         <Stack.Screen name="(auth)/signin" options={{ title: `` }} />
                 <Stack.Screen name="(auth)/forgotpassword" options={{ title: `` }} />
