@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { StyleSheet, Text, View, useColorScheme, Image,ScrollView,Dimensions } from 'react-native'
+import { StyleSheet, Text, View, useColorScheme, Image,ScrollView,Dimensions, Pressable } from 'react-native'
 import { Link } from 'expo-router'
 import { Colors } from '../../constants/colors'
 import CongratsLogo from "../../assets/congrats.png";
@@ -31,9 +31,9 @@ your account is complete, please enjoy the best{"\n"}menu from us
 </View>
 
  {/* Action Buttons */}
-      <Link href="/signin" style={styles.primaryButton}>
+      <Pressable href="/signin" style={({pressed}) => [styles.primaryButton, pressed && styles.pressedButton] }>
         <Text style={styles.primaryButtonText}>Get Started</Text>
-      </Link>
+      </Pressable>
     </View>
      </View>
   )
@@ -88,10 +88,20 @@ CongratsLogo: {
     backgroundColor: '#E10600',
     marginTop: 10,
     padding: 15,
-    borderRadius: 15,
+    borderRadius: 10,
     width: 350,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+   pressedButton: {
+    backgroundColor: '#E10600',
+    marginTop: 10,
+    padding: 15,
+    borderRadius: 15,
+    width: 300,
+    alignItems: 'center',
+    justifyContent: 'center',
+    opacity:0.8
   },
   primaryButtonText: {
     color: '#fff',
