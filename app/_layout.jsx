@@ -4,6 +4,8 @@ import { Slot, Stack, router } from 'expo-router'
 import { Colors } from '../constants/colors'
 import { StatusBar } from 'expo-status-bar'
 import Logo from '../assets/Noodle-logo.png'
+import { Ionicons } from '@expo/vector-icons';
+
 
 const RootLayout = () => {
   const colorScheme = useColorScheme()
@@ -21,9 +23,28 @@ const RootLayout = () => {
         
         <Stack.Screen name="index" options={{ title: ``, headerShown: false, headerBackVisible: false,   // hides the back button on the header
     gestureEnabled: false  }} />
-        <Stack.Screen name="about" options={{ title: `` }} />
-                <Stack.Screen name="home" options={{ title: `` }} />
-
+        <Stack.Screen name="about" options={{ title: ``}} />
+ <Stack.Screen
+        name="home"
+        options={{
+          title: 'Home', headerBackVisible: false, 
+              headerTitleAlign: 'center',
+  headerTitleStyle: {
+      fontWeight: 'bold',
+    },
+          headerRight: () => (
+            <Pressable onPress={() => console.log('Notifications')}
+                style={{ marginRight: 10 }}
+>
+              <Ionicons
+                name="notifications-outline"
+                size={24}
+                color="black"
+              />
+            </Pressable>
+          ),
+        }}
+      />
         <Stack.Screen name="contact" options={{ title: `` }} />
         <Stack.Screen name="(auth)/signin" options={{ title: `` }} />
                 <Stack.Screen name="(auth)/forgotpassword" options={{ title: `` }} />

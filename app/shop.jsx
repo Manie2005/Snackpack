@@ -76,6 +76,9 @@ const Shop = () => {
       <Link href="/signup" style={styles.secondaryButton}>
         <Text style={styles.secondaryButtonText}>Sign Up</Text>
       </Link>
+      <Link href="/home" style={styles.secondaryButton}>
+        <Text style={styles.secondaryButtonText}>Home</Text>
+      </Link>
 
     </View>
     </View>
