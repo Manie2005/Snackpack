@@ -4,6 +4,7 @@ import {
   Text,
   TextInput,
   StyleSheet,
+  Pressable,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
@@ -31,11 +32,18 @@ export default function SearchBar() {
       </View>
 
       {/* Delivery Card */}
-      <View style={styles.deliveryCard}>
-        <Text style={styles.deliveryText}>
-          Delivery to Home
-        </Text>
-      </View>
+     <View style={styles.deliveryCard}>
+  <Text style={styles.deliveryText}>
+    Delivery to Home
+  </Text>
+
+  <Text style={styles.deliveryParagraph}>
+    Plot 56 Oron road, Uyo.
+  </Text>
+  <Pressable href="/map" style={styles.secondaryButton}>
+          <Text style={styles.secondaryButtonText}>2.4km</Text>
+        </Pressable>
+</View>
 
        {/* Promo Card */}
       <View style={styles.promoCard}>
@@ -70,13 +78,12 @@ const styles = StyleSheet.create({
   },
 
   deliveryCard: {
-    marginTop: 20,
     marginHorizontal: 20,
     backgroundColor: '#E10600',
     borderRadius: 16,
     padding: 20,
     height:150,
-    
+    marginTop:30
   },
 
   deliveryText: {
@@ -85,6 +92,28 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
       },
 
+       deliveryParagraph: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: 400,
+    paddingTop:5
+      },
+
+      secondaryButton: {
+    backgroundColor: '#fff',
+    marginTop: 15,
+    padding: 10,
+    borderRadius: 15,
+    width: 80,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  secondaryButtonText: {
+    color: '#E10600',
+    fontSize: 8,
+    fontWeight: '600',
+    textAlign: 'center',
+  },
     promoCard: {
     marginTop: 20,
     marginHorizontal: 20,
